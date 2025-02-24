@@ -1,0 +1,43 @@
+.sidebar {
+    width: 220px;
+    background: #000000;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.Logo {
+    margin-top: 20px;
+    margin-bottom: 310px;
+    width: 200px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+.sidebar nav ul li a {
+
+    font-family: "Henny Penny", serif;
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.15s;
+    display: block;
+    padding: 5px 15px;
+    border-bottom:1px solid #fff; ;
+}
+.sidebar nav ul li a:hover {
+    color: #0a84ff;
+}
+
+.sidebar nav ul li i{
+    margin-right: 15px;
+}
