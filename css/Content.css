@@ -189,3 +189,34 @@ section {
     transition: filter 0.3s ease;
 }
 
+.about-details {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    transform: translateX(10px);
+}
+
+.exp-title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.exp-details {
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
