@@ -1,58 +1,38 @@
 .sidebar {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    flex-shrink: 0;
-    width: 200px;
-    background: #1B1F38;
+    width: var(--sidebar-width);
+    background: var(--sidebar-bg);
+    border-radius: 25px;
+    position: fixed;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    position: fixed; /* Keeps sidebar fixed when scrolling */
-    /*transition: width 0.4s ease-in-out; /* Smooth width transition */
+    justify-content: center;
+    align-items: center
 }
 
-/*.Logo {
-    margin-top: 20px;
-    margin-bottom: 310px;
-    width: 200px;
-}*/
+.sidebar.active {
+    transform: translateX(0);
+    box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
 
 .sidebar nav ul {
     list-style: none;
-    padding: 0;
+    gap: 0.8rem;
 }
-.sidebar nav ul li {
-    margin: 20px 0;
-}
+
 .sidebar nav ul li a {
-
     font-family: "Henny Penny", serif;
-    font-size: 28px;
+    color: #e0e0e0;
     text-decoration: none;
-    color: #fff;
-    transition: color 0.15s;
-    display: block;
-    padding: 5px 15px;
-    border-bottom:1px solid #fff; ;
+    font-weight: 500;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    transition: var(--transition);
 }
-.sidebar nav ul li a:hover {
-    color: #0a84ff;
-}
-
-.sidebar nav ul li i{
-    margin-right: 15px;
-}
-
-
-
-.sidebar nav ul li a i {
-    transition: transform 0.3s ease-in-out;
-}
-
-.sidebar nav ul li a:hover i {
-    transform: scale(1.3) rotate(5deg);
-}
-
-
