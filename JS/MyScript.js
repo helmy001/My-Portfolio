@@ -95,3 +95,50 @@ document.querySelectorAll('.project-card').forEach(card => {
     openModal(card);
     });
 });
+
+/* ===== Open Modal Function ===== */
+function openModal(card) {
+    // Read basic data
+    const title = card.dataset.title;
+    const description = card.dataset.description;
+    const info = JSON.parse(card.dataset.info); // expects an object with keys (Date, Category, Tech, etc.)
+    const templateSections = JSON.parse(card.dataset.template); // array of objects with title & content
+    slideUrls = JSON.parse(card.dataset.images); // array of image URLs
+
+    // Populate Project Info Sidebar
+    projectInfoContainer.innerHTML = `
+        <p><strong>Date:</strong> ${info.Date || 'N/A'}</p>
+        <p><strong>Category:</strong> ${info.Category || 'N/A'}</p>
+        <p><strong>Technology:</strong> ${info.Tech || 'N/A'}</p>`;
+
+    // Populate Carousel
+    currentSlideIndex = 0;
+    carouselSlider.innerHTML = '';
+    carouselDots.innerHTML = '';
+    slideUrls.forEach((url, index) => {
+        const slideDiv = document.createElement('div');
+        slideDiv.className = 'slide';
+        slideDiv.innerHTML = `<img src="${url}" alt="Slide ${index + 1}" class="slide-image">`;
+        carouselSlider.appendChild(slideDiv);
+
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goToSlide(index));
+        carouselDots.appendChild(dot);
+    });
+    updateCarousel();
+
+    // Populate Dynamic Detail Sections using the provided template
+    detailSections.innerHTML = '';
+    templateSections.forEach(section => {
+        const secDiv = document.createElement('div');
+        secDiv.className = 'detail-section';
+        secDiv.innerHTML = `
+        <h3 class="detail-title">${section.title}</h3>
+        <div class="detail-content">${section.content}</div>`;
+        detailSections.appendChild(secDiv);
+    });
+
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
