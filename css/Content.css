@@ -485,11 +485,11 @@ input:focus, textarea:focus {
     gap: 2rem;
     margin-bottom: 2rem;
 } 
-.left-column {
+.ModalLeft-column {
     flex: 1 1 700px;
     min-width: 500px;
 }
-.right-column {
+.ModalRight-column {
     flex: 0 1 300px;
     min-width: 280px;
     background: rgba(255,255,255,0.05);
@@ -560,4 +560,28 @@ input:focus, textarea:focus {
 .carousel-dot.active {
     background: var(--primary-color);
     transform: scale(1.2);
+}
+
+/* ======= Dynamic Detail Sections ======= */
+.detail-sections {
+    margin-top: 2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.detail-section {
+    margin-bottom: 2.5rem;
+}
+
+.detail-title {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(10,132,255,0.3);
+}
+
+.detail-content {
+    line-height: 1.6;
 }
