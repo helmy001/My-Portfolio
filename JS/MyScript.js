@@ -63,4 +63,10 @@ document.querySelector('.contact-form').addEventListener('submit', (e) => {
   });
 
 /* ========= ========= ========= Window resize handler ========= ========= ========= */
-
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) {
+        sidebar.classList.remove('active');
+        backdrop.classList.remove('active');
+        mobileMenu.querySelector('i').classList.remove('fa-times');
+    }
+});
