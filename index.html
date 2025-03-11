@@ -289,16 +289,16 @@
                             data-images='["https://via.placeholder.com/800x500/ccc/000?text=Robot1","https://via.placeholder.com/800x500/bbb/000?text=Robot2","https://via.placeholder.com/800x500/999/000?text=Robot3"]'>
                         <div class="card-image" style="background-image: url('https://via.placeholder.com/800x500/ccc/000?text=RobotThumb');"></div>
                         <div class="card-content">
-                        <h3>Industrial Robot Controller</h3>
-                        <p>A robust solution for precise motion control.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">ROS2</span>
-                            <span class="tech-tag">STM32</span>
+                            <h3>Industrial Robot Controller</h3>
+                            <p>A robust solution for precise motion control.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">ROS2</span>
+                                <span class="tech-tag">STM32</span>
+                            </div>
+                            <button class="view-details-btn">View Details</button>
                         </div>
-                        <button class="view-details-btn">View Details</button>
                     </div>
-               </div>
 
                     <!-- Project 2 -->
                     <div class="project-card">
@@ -408,32 +408,32 @@
             <!--=============  Modal Overlay for Detailed Project View ========== -->
             <div class="modal-overlay" id="modalOverlay">
                 <div class="modal-content">
-                <button class="close-modal" id="closeModal">&times;</button>
-                
-                <!-- Modal Top: Carousel and Project Meta -->
-                <div class="modal-top">
-                    <!-- Left Column: Carousel -->
-                    <div class="ModalLeft-column">
-                    <div class="carousel-container">
-                        <div class="carousel-slider" id="carouselSlider"></div>
-                        <button class="carousel-control prev-slide" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
-                        <button class="carousel-control next-slide" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
-                        <div class="carousel-dots" id="carouselDots"></div>
+                    <button class="close-modal" id="closeModal">&times;</button>
+                    
+                    <!-- Modal Top: Carousel and Project Meta -->
+                    <div class="modal-top">
+                        <!-- Left Column: Carousel -->
+                        <div class="ModalLeft-column">
+                            <div class="carousel-container">
+                                <div class="carousel-slider" id="carouselSlider"></div>
+                                <button class="carousel-control prev-slide" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-control next-slide" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+                                <div class="carousel-dots" id="carouselDots"></div>
+                            </div>
+                        </div>
+                        <!-- Right Column: Project Meta -->
+                        <div class="ModalRight-column">
+                            <div class="project-info">
+                                <h3>Project Information</h3>
+                                <div id="projectInfo"></div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <!-- Right Column: Project Meta -->
-                    <div class="ModalRight-column">
-                    <div class="project-info">
-                        <h3>Project Information</h3>
-                        <div id="projectInfo"></div>
-                    </div>
-                    </div>
-                </div>
 
-                <!-- Modal Bottom: Dynamic Detail Sections -->
-                <div class="detail-sections" id="detailSections">
-                    <!-- Dynamic sections will be injected here -->
-                </div>
+                    <!-- Modal Bottom: Dynamic Detail Sections -->
+                    <div class="detail-sections" id="detailSections">
+                        <!-- Dynamic sections will be injected here -->
+                    </div>
                 </div>
             </div>
         </div>

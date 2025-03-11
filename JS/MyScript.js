@@ -1,5 +1,4 @@
-
-/* ========= ========= ========= Sidebar Toggle ========= ========= ========= */
+/* ================== Sidebar Toggle ================= */
 const mobileMenu = document.querySelector('.mobile-menu-toggle');
 const sidebar = document.querySelector('.sidebar');
 const backdrop = document.querySelector('.sidebar-backdrop');
@@ -22,47 +21,21 @@ document.querySelectorAll('.sidebar nav a').forEach(link => {
 
 // Close sidebar when clicking outside
 document.addEventListener('click', (e) => {
-if (!sidebar.contains(e.target) && 
-    !mobileMenu.contains(e.target) && 
-    sidebar.classList.contains('active')) {
-    toggleSidebar();
+    if (!sidebar.contains(e.target) && 
+        !mobileMenu.contains(e.target) && 
+        sidebar.classList.contains('active')) {
+        toggleSidebar();
     }
 });
 
-
-/* ========= ========= ========= Smooth Scroll ========= ========= ========= */
-
-/*document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-});
-
-// Section Animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
-        }
-    });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
-});*/
-
-/* ========= ========= ========= Form Submission ========= ========= ========= */
-
+/* ================= Form Submission =============== */
 document.querySelector('.contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    // Add your form submission logic here
     alert('Message sent successfully!');
     e.target.reset();
-  });
+});
 
-/* ========= ========= ========= Window resize handler ========= ========= ========= */
+/* ================== Window Resize Handler =================== */
 window.addEventListener('resize', () => {
     if (window.innerWidth >= 1024) {
         sidebar.classList.remove('active');
@@ -71,12 +44,12 @@ window.addEventListener('resize', () => {
     }
 });
 
-/* ========= ========= ========= Modal Details ========= ========= ========= */
-/* ===== Global Modal Variables ===== */
+/* =================== Modal Details & Carousel ================ */
+// Global Modal Variables
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModalBtn = document.getElementById('closeModal');
 
-/* ===== Carousel Variables ===== */
+// Carousel Variables
 const carouselSlider = document.getElementById('carouselSlider');
 const carouselDots = document.getElementById('carouselDots');
 const prevSlideBtn = document.getElementById('prevSlide');
@@ -84,32 +57,41 @@ const nextSlideBtn = document.getElementById('nextSlide');
 let slideUrls = [];
 let currentSlideIndex = 0;
 
-/* ===== Detail Sections Container ===== */
+// Detail Sections Container & Project Info Container
 const detailSections = document.getElementById('detailSections');
 const projectInfoContainer = document.getElementById('projectInfo');
 
-/* ===== Event Listeners for Project Cards ===== */
+// Event Listeners for Project Cards
 document.querySelectorAll('.project-card').forEach(card => {
-    card.querySelector('.view-details-btn').addEventListener('click', (e) => {
-    e.stopPropagation();
-    openModal(card);
-    });
+    const detailsBtn = card.querySelector('.view-details-btn');
+    if(detailsBtn){
+        detailsBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openModal(card);
+        });
+    }
 });
 
-/* ===== Open Modal Function ===== */
+// Open Modal Function
 function openModal(card) {
-    // Read basic data
     const title = card.dataset.title;
     const description = card.dataset.description;
-    const info = JSON.parse(card.dataset.info); // expects an object with keys (Date, Category, Tech, etc.)
-    const templateSections = JSON.parse(card.dataset.template); // array of objects with title & content
-    slideUrls = JSON.parse(card.dataset.images); // array of image URLs
+    let info, templateSections;
+    try {
+        info = JSON.parse(card.dataset.info);
+        templateSections = JSON.parse(card.dataset.template);
+        slideUrls = JSON.parse(card.dataset.images);
+    } catch (err) {
+        console.error('Error parsing JSON data from card:', err);
+        return;
+    }
 
-    // Populate Project Info Sidebar
+    // Populate Project Info
     projectInfoContainer.innerHTML = `
         <p><strong>Date:</strong> ${info.Date || 'N/A'}</p>
         <p><strong>Category:</strong> ${info.Category || 'N/A'}</p>
-        <p><strong>Technology:</strong> ${info.Tech || 'N/A'}</p>`;
+        <p><strong>Technology:</strong> ${info.Tech || 'N/A'}</p>
+    `;
 
     // Populate Carousel
     currentSlideIndex = 0;
@@ -128,14 +110,15 @@ function openModal(card) {
     });
     updateCarousel();
 
-    // Populate Dynamic Detail Sections using the provided template
+    // Populate Detail Sections using template
     detailSections.innerHTML = '';
     templateSections.forEach(section => {
         const secDiv = document.createElement('div');
         secDiv.className = 'detail-section';
         secDiv.innerHTML = `
-        <h3 class="detail-title">${section.title}</h3>
-        <div class="detail-content">${section.content}</div>`;
+            <h3 class="detail-title">${section.title}</h3>
+            <div class="detail-content">${section.content}</div>
+        `;
         detailSections.appendChild(secDiv);
     });
 
@@ -143,38 +126,41 @@ function openModal(card) {
     document.body.style.overflow = 'hidden';
 }
 
-/* ===== Carousel Functions ===== */
+// Carousel Functions
 function updateCarousel() {
     carouselSlider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
     Array.from(carouselDots.children).forEach((dot, idx) => {
         dot.classList.toggle('active', idx === currentSlideIndex);
     });
-    }
+}
 
-    function goToSlide(index) {
+function goToSlide(index) {
     currentSlideIndex = index;
     updateCarousel();
-    }
-    prevSlideBtn.addEventListener('click', (e) => {
+}
+
+prevSlideBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentSlideIndex = (currentSlideIndex - 1 + slideUrls.length) % slideUrls.length;
     updateCarousel();
-    });
-    nextSlideBtn.addEventListener('click', (e) => {
+});
+
+nextSlideBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentSlideIndex = (currentSlideIndex + 1) % slideUrls.length;
     updateCarousel();
-    });
+});
 
-    /* ===== Modal Close ===== */
-    closeModalBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (e) => {
+/* ============= Modal Close ============== */
+closeModalBtn.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => {
     if(e.target === modalOverlay) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
+});
+document.addEventListener('keydown', (e) => {
     if(modalOverlay.classList.contains('active') && e.key === 'Escape') closeModal();
-    });
-    function closeModal() {
+});
+
+function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
