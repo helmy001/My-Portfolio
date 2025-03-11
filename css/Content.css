@@ -89,3 +89,19 @@ section {
     min-width: 200px;
 }
 
+.Work-Button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(10, 132, 255, 0.4);
+}
+
+.home-gif {
+    width: 110%;
+    max-width: 700px;
+    height: auto;
+    transition: transform 0.3s;
+
+}
+.home-gif:hover {
+    transform: translateY(-10px);
+}
+
