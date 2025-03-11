@@ -70,3 +70,28 @@ window.addEventListener('resize', () => {
         mobileMenu.querySelector('i').classList.remove('fa-times');
     }
 });
+
+/* ========= ========= ========= Modal Details ========= ========= ========= */
+/* ===== Global Modal Variables ===== */
+const modalOverlay = document.getElementById('modalOverlay');
+const closeModalBtn = document.getElementById('closeModal');
+
+/* ===== Carousel Variables ===== */
+const carouselSlider = document.getElementById('carouselSlider');
+const carouselDots = document.getElementById('carouselDots');
+const prevSlideBtn = document.getElementById('prevSlide');
+const nextSlideBtn = document.getElementById('nextSlide');
+let slideUrls = [];
+let currentSlideIndex = 0;
+
+/* ===== Detail Sections Container ===== */
+const detailSections = document.getElementById('detailSections');
+const projectInfoContainer = document.getElementById('projectInfo');
+
+/* ===== Event Listeners for Project Cards ===== */
+document.querySelectorAll('.project-card').forEach(card => {
+    card.querySelector('.view-details-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    openModal(card);
+    });
+});
