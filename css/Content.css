@@ -134,3 +134,33 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
 }
+
+.about-skills {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.category-title i {
+    font-size: 1.5rem;
+}
+
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
