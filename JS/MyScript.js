@@ -53,4 +53,14 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });*/
 
+/* ========= ========= ========= Form Submission ========= ========= ========= */
+
+document.querySelector('.contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Message sent successfully!');
+    e.target.reset();
+  });
+
+/* ========= ========= ========= Window resize handler ========= ========= ========= */
 
