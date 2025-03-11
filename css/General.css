@@ -81,3 +81,72 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     }
 }
+
+/* ===== Responsive Design MAX Width 768px===== */
+
+@media (max-width: 768px) {
+    .masked-text {
+        font-size: 3rem;
+    }
+
+    .Intro-container {
+        font-size: 1rem;
+    }
+
+    .Work-Button {
+        min-width: 100%;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+        border-radius: 20px;
+    }
+
+    /* About Section Adjustments */
+    .about-header h2 {
+        font-size: 2rem;
+    }
+
+    .category-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-item {
+        padding: 0.8rem;
+    }
+
+    .skill-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .exp-title h4 {
+        font-size: 1rem;
+    }
+
+    .exp-details p {
+        font-size: 0.9rem;
+    }
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .contact-item i {
+        font-size: 1.5rem;
+    }
+    
+    input, textarea {
+        padding: 1rem;
+    }
+}
