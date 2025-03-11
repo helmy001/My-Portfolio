@@ -30,3 +30,25 @@ body {
     line-height: 1.6;
 }
 
+/* ========= ========= ========= ====== Responsive Design ===== ========= ========= ========= */
+
+/* ===== Responsive Design ===== */
+
+@media (min-width: 1024px) {
+    .sidebar {
+        transform: translateX(0);
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .main-container {
+        margin-left: var(--sidebar-width);
+    }
+
+    .about-content {
+        gap: 4rem;
+    }
+}
