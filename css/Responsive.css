@@ -48,6 +48,11 @@
     .skill-items {
         grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     }
+    .ModalLeft-column, .ModalRight-column {
+        flex: 1 1 100%;
+    }
+
+    .slide { height: 400px; }
 }
 
 /* ===== Responsive Design MAX Width 768px===== */
@@ -117,6 +122,9 @@
     input, textarea {
         padding: 1rem;
     }
+
+    .slide { height: 300px; }
+
 }
 
 /* ===== Responsive Design MAX Width 600px===== */
@@ -133,6 +141,8 @@
     .about-details {
         padding: 1.5rem;
     }
+    .slide { height: 250px; }
+
 }
 /* ===== Responsive Design MAX Width 480px===== */
 
