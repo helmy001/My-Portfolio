@@ -277,10 +277,6 @@ section {
     transform: translateY(-10px);
 }
 
-.project-header {
-    margin-bottom: 1.5rem;
-}
-
 .card-image {
     height: 200px;
     background-size: cover;

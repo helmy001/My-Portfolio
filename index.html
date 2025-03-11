@@ -277,30 +277,28 @@
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
                     <!-- Project 1 -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Smart Task Board</h3>
-                            <div class="project-description">
-                                STM32-based productivity tool with display and IoT capabilities for real-time task management.
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">C</span>
-                            <span class="tech-tag">FreeRTOS</span>
+                    <div class="project-card"
+                            data-title="Industrial Robot Controller"
+                            data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, ROS2, STM32"}'
+                            data-description="A high-precision motion control system designed for industrial robotic arms."
+                            data-template='[
+                            {"title":"Project Overview","content":"This project developed a motion control system integrated with ROS2 for industrial robotics."},
+                            {"title":"Key Features","content":"Real-time trajectory planning, collision detection, and power monitoring."},
+                            {"title":"Technical Specifications","content":"Utilizes STM32H743 microcontroller with 1MB RAM running FreeRTOS and custom C++ code."}
+                            ]'
+                            data-images='["https://via.placeholder.com/800x500/ccc/000?text=Robot1","https://via.placeholder.com/800x500/bbb/000?text=Robot2","https://via.placeholder.com/800x500/999/000?text=Robot3"]'>
+                        <div class="card-image" style="background-image: url('https://via.placeholder.com/800x500/ccc/000?text=RobotThumb');"></div>
+                        <div class="card-content">
+                        <h3>Industrial Robot Controller</h3>
+                        <p>A robust solution for precise motion control.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">ROS2</span>
                             <span class="tech-tag">STM32</span>
-                            <span class="tech-tag">ESP32</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                                Demo
-                            </a>
-                        </div>
+                        <button class="view-details-btn">View Details</button>
                     </div>
+               </div>
 
                     <!-- Project 2 -->
                     <div class="project-card">
