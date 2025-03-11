@@ -258,9 +258,16 @@
         height: 200px;
     }
     .carousel-dot {
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
     }
+    .close-modal {
+        width: 20px;
+        height: 20px;
+        font-size: 1rem;
+    } 
+    .prev-slide { left: 0.1rem; }
+    .next-slide { right: 0.1rem; }
 
 }
 
