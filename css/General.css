@@ -234,3 +234,20 @@ body {
         text-align: center;
     }
 }
+
+/* ===== Responsive Design MAX Width 360px===== */
+@media (max-width: 360px) {
+    .skill-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .skill-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .about-header p {
+        font-size: 0.9rem;
+    }
+}
