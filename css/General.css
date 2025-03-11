@@ -150,3 +150,19 @@ body {
         padding: 1rem;
     }
 }
+
+/* ===== Responsive Design MAX Width 600px===== */
+
+@media (max-width: 600px) {
+    .skill-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-skills {
+        padding: 1.5rem;
+    }
+
+    .about-details {
+        padding: 1.5rem;
+    }
+}
