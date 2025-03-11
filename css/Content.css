@@ -12,3 +12,20 @@ section {
     margin: 2rem 0;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+ /* ========= ========= ========= ========= ========= ========= ========= ========= */
+
+ /* ===== Home Section ===== */
+ .Home-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+    min-height: 90vh;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(23,28,40,0.9), rgba(23,28,40,0.9)), 
+        url("/Images/bk1.png"); /* Background with overlay */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
