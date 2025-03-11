@@ -9,89 +9,24 @@
         <link rel="stylesheet" href="css/General.css">
         <link rel="stylesheet" href="css/SideBarStyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Sigmar&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap" rel="stylesheet">
+
+
     </head>
 
         
 
     <body>
-        <div class="sidebar">
-            
-            <!--<a href="#"><img src="images/logo.png" class="Logo"></a>-->
-            <nav>
-                <ul>
-                    <li><a href="#Home"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-                    <li><a href="#projects"><i class="fa fa-list"></i>Projects</a></li>
-                    <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-                </ul>
-            </nav>
-        </div>
 
-
-        <div class="main-container">
-            <section id="Home" class="Home-content">
-                <div class="Home-Div1">
-                    <h1 class="masked-text">Hi all, I'm Mohamed</h1>
-                    <div class="Intro-container">
-                        A Fresh graduate Embedded Software Engineer with expertise in STM32 firmware development
-                        RTOS, and Peripheral driver programming. Skilled in C/C++, hardware debugging, and real-time embedded systems
-                        Strong problem-solving skills and experience working independently on complex embedded projects.
-                    </div>                    
-                    <div class="Intro_Buttons">
-                        <a href="#projects" class="Work-Button">View My Work</a> 
-                        <a href="#projects" class="Work-Button">My Resume</a> 
-                    </div>
-                </div>
-
-
-                <div class="Home-Div2">
-                    <img  class="home-gif" src="Images/intro.gif">
-                </div>
-
-            </section>
-            
-            <section id="about" class="section">
-                <h2>About Me</h2>
-                <p>I am an enthusiastic Embedded Systems Engineer...</p>
-            </section>
-            <section id="skills" class="section">
-                <h2>Skills</h2>
-                <p>Experienced in Embedded C, RTOS, and STM32...</p>
-            </section>
-            <section id="projects" class="section">
-                <h2>Projects</h2>
-                <p>Developed a Task Timer Board and IoT-based home automation...</p>
-            </section>
-            <footer>
-            </footer>
-        </div>
         
     </body>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll(".section");
-        
-            function revealSections() {
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (sectionTop < windowHeight - 100) {
-                        section.classList.add("visible");
-                    }
-                });
-            }
-        
-            window.addEventListener("scroll", revealSections);
-            revealSections(); // Run on page load to reveal visible sections
-        });
+
     </script>
 </html>
