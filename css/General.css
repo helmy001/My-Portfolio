@@ -1,15 +1,32 @@
-body {
-    margin: 0;
-    padding: 0;
-    padding-left: 200px;
-    scroll-behavior: smooth;
-    background-color: #131722;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
-
 html {
     scroll-behavior: smooth;
+}
+
+ /* ===== Global Variables ===== */
+ :root {
+    --primary-color: #0a84ff;
+    --secondary-color: #00d4ff;
+    --bg-color: #131722;
+    --sidebar-bg: #1B1F38;
+    --text-color: #fff;
+    --sidebar-width: 200px;
+    --section-bg: #131722;
+    --card-bg: #1a1a1a;
+    --border-radius: 40px;
+    --transition: all 0.3s ease;
+}
+
+/* ===== Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 
