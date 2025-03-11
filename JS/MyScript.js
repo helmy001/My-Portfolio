@@ -142,3 +142,39 @@ function openModal(card) {
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
+
+/* ===== Carousel Functions ===== */
+function updateCarousel() {
+    carouselSlider.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+    Array.from(carouselDots.children).forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlideIndex);
+    });
+    }
+
+    function goToSlide(index) {
+    currentSlideIndex = index;
+    updateCarousel();
+    }
+    prevSlideBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentSlideIndex = (currentSlideIndex - 1 + slideUrls.length) % slideUrls.length;
+    updateCarousel();
+    });
+    nextSlideBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    currentSlideIndex = (currentSlideIndex + 1) % slideUrls.length;
+    updateCarousel();
+    });
+
+    /* ===== Modal Close ===== */
+    closeModalBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+    if(e.target === modalOverlay) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+    if(modalOverlay.classList.contains('active') && e.key === 'Escape') closeModal();
+    });
+    function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
