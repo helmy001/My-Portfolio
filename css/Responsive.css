@@ -123,7 +123,44 @@
         padding: 1rem;
     }
 
-    .slide { height: 300px; }
+    /* Make modal content more fluid */
+    .modal-content {
+        padding: 1rem;
+        width: 95%;
+        max-width: 95%;
+    }
+    /* Stack the modal top section columns vertically */
+    .modal-top {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    /* Ensure both columns take full width */
+    .ModalLeft-column,
+    .ModalRight-column {
+    flex: 1 1 100%;
+    min-width: 0;
+    }
+    /* Reduce carousel height */
+    .carousel-container {
+        height: 250px; /* or adjust as needed */
+    }
+    .slide {
+        height: 250px;
+    }
+    /* Adjust slider image object-fit if needed */
+    .slide img {
+        object-fit: cover;
+    }
+    /* Reduce carousel controls size */
+    .carousel-control {
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+    /* Stack dots if needed, or reduce their size */
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+    }
 
 }
 
@@ -211,6 +248,20 @@
     .contact-item div {
         text-align: center;
     }
+    .modal-content {
+        padding: 0.8rem;
+    }
+    .carousel-container {
+        height: 200px;
+    }
+    .slide {
+        height: 200px;
+    }
+    .carousel-dot {
+        width: 6px;
+        height: 6px;
+    }
+
 }
 
 /* ===== Responsive Design MAX Width 360px===== */
@@ -227,5 +278,9 @@
 
     .about-header p {
         font-size: 0.9rem;
+    }
+    .slide { 
+        height: 150px;
+        width: 150px; 
     }
 }
