@@ -186,3 +186,25 @@ document.addEventListener('DOMContentLoaded', () => {
         card.dataset.images = JSON.stringify(allImages);
     });
 });
+
+/* ============= Projects 3d Tilt Effect============== */
+// Add to script.js
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+      card.style.transform = `
+        perspective(1000px)
+        rotateX(${(y - rect.height/2) * -0.02}deg)
+        rotateY(${(x - rect.width/2) * 0.04}deg)
+      `;
+    });
+  
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+    });
+});
