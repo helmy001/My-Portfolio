@@ -73,19 +73,35 @@ document.querySelectorAll('.project-card').forEach(card => {
     }
 });
 
-// Open Modal Function
+/* =================== Auto slide ================ */
+// Function to start auto slide
+function startAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => {
+      nextSlideBtn.click();
+    }, 2500);
+}
+
+/* =================== Open Modal Function ================ */
+
 function openModal(card) {
     const title = card.dataset.title;
     const description = card.dataset.description;
-    let info, templateSections;
+
+    let info, templateSections,ImgDesc;
     try {
         info = JSON.parse(card.dataset.info);
         templateSections = JSON.parse(card.dataset.template);
         slideUrls = JSON.parse(card.dataset.images);
-    } catch (err) {
-        console.error('Error parsing JSON data from card:', err);
-        return;
-    }
+        ImgDesc = JSON.parse(card.dataset.imagedesc || '[]');
+        // Ensure ImgDesc matches slide count
+        if (!Array.isArray(ImgDesc)) ImgDesc = [];
+        ImgDesc = [...ImgDesc, ...Array(Math.max(slideUrls.length - ImgDesc.length, 0)).fill('')];
+        
+        }catch (err) {
+            console.error('Error parsing JSON data from card:', err);
+            return;
+        }   
 
     // Populate Project Info
     projectInfoContainer.innerHTML = `
@@ -101,7 +117,13 @@ function openModal(card) {
     slideUrls.forEach((url, index) => {
         const slideDiv = document.createElement('div');
         slideDiv.className = 'slide';
-        slideDiv.innerHTML = `<img src="${url}" alt="Slide ${index + 1}" class="slide-image">`;
+        slideDiv.innerHTML = `
+        <img src="${url}" alt="Slide ${index + 1}" class="slide-image">
+        <div class="image-description">
+            <span class="description-number">${(index + 1).toString().padStart(2, '0')}</span>
+            <span class="description-text">${ImgDesc[index]}</span>
+        </div>
+        `;
         carouselSlider.appendChild(slideDiv);
 
         const dot = document.createElement('button');
@@ -111,12 +133,19 @@ function openModal(card) {
     });
     updateCarousel();
 
-    // Start auto-slide (advance slide every 3 seconds)
-    if (autoSlideInterval) clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(() => {
-        nextSlideBtn.click();
-    }, 2000);
+    // Start auto-slide
+    startAutoSlide();
 
+    // Add event listeners to pause/resume auto-slide on hover over the carousel area
+    carouselSlider.addEventListener('click', () => {
+        if(autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+        }
+    });
+    carouselSlider.addEventListener('mouseleave', () => {
+        startAutoSlide();
+    });
     // Populate Detail Sections using template
     detailSections.innerHTML = '';
     templateSections.forEach(section => {

@@ -535,6 +535,7 @@ input:focus, textarea:focus {
     transition: transform 0.5s ease-in-out;
 }
 .slide {
+    position: relative;
     min-width: 100%;
     height: 500px;
     background: #000;
@@ -549,8 +550,16 @@ input:focus, textarea:focus {
 .slide img:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
-  }
+}
 
+.slide:hover .image-description {
+    bottom: 0;
+    transition: var(--transition);
+}
+.slide:hover img {
+    filter: brightness(0.9);
+}
+    
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -615,3 +624,33 @@ input:focus, textarea:focus {
 .detail-content {
     line-height: 1.6;
 }
+
+/* ======= Image Description styles ======= */
+.image-description {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    color: #fff;
+    padding: 1.5rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.description-number {
+color: var(--primary-color);
+font-weight: bold;
+font-size: 1.2rem;
+min-width: 40px;
+text-align: center;
+}
+
+.description-text {
+flex: 1;
+line-height: 1.4;
+}
+
