@@ -47,6 +47,9 @@ window.addEventListener('resize', () => {
 /* =================== Modal Details & Carousel ================ */
 // Global Modal Variables
 let autoSlideInterval;
+let isHovering = false;
+let isMouseDown = false;
+
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModalBtn = document.getElementById('closeModal');
 
@@ -76,11 +79,25 @@ document.querySelectorAll('.project-card').forEach(card => {
 /* =================== Auto slide ================ */
 // Function to start auto slide
 function startAutoSlide() {
-    if (autoSlideInterval) clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(() => {
-      nextSlideBtn.click();
-    }, 2500);
+    if (!isMouseDown) {
+        if (autoSlideInterval) clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            nextSlideBtn.click();
+        }, 2500);
+    }
 }
+
+// Mouse hold detection
+carouselSlider.addEventListener('mousedown', () => {
+    isMouseDown = true;
+    clearInterval(autoSlideInterval);
+});
+
+document.addEventListener('mouseup', () => {
+    isMouseDown = false;
+    startAutoSlide();
+});
+
 
 /* =================== Open Modal Function ================ */
 
@@ -97,7 +114,7 @@ function openModal(card) {
         // Ensure ImgDesc matches slide count
         if (!Array.isArray(ImgDesc)) ImgDesc = [];
         ImgDesc = [...ImgDesc, ...Array(Math.max(slideUrls.length - ImgDesc.length, 0)).fill('')];
-        
+
         }catch (err) {
             console.error('Error parsing JSON data from card:', err);
             return;
@@ -136,16 +153,6 @@ function openModal(card) {
     // Start auto-slide
     startAutoSlide();
 
-    // Add event listeners to pause/resume auto-slide on hover over the carousel area
-    carouselSlider.addEventListener('click', () => {
-        if(autoSlideInterval) {
-        clearInterval(autoSlideInterval);
-        autoSlideInterval = null;
-        }
-    });
-    carouselSlider.addEventListener('mouseleave', () => {
-        startAutoSlide();
-    });
     // Populate Detail Sections using template
     detailSections.innerHTML = '';
     templateSections.forEach(section => {
@@ -203,6 +210,7 @@ function closeModal() {
         clearInterval(autoSlideInterval);
         autoSlideInterval = null;
     }
+    currentSlideIndex = 0; // Reset to first slide
 }
 
 /* ============= Projects Images Query ============== */

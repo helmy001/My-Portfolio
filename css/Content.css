@@ -577,6 +577,13 @@ input:focus, textarea:focus {
 .prev-slide { left: 1rem; }
 .next-slide { right: 1rem; }
 
+.carousel-slider:active {
+    cursor: grab;
+}
+.carousel-slider {
+    transition: transform 0.5s ease-in-out;
+}
+
 .carousel-dots {
     position: absolute;
     bottom: 1rem;
