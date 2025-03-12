@@ -98,6 +98,16 @@ document.addEventListener('mouseup', () => {
     startAutoSlide();
 });
 
+// Touch device support
+carouselSlider.addEventListener('touchstart', () => {
+    isMouseDown = true;
+    clearInterval(autoSlideInterval);
+});
+
+document.addEventListener('touchend', () => {
+    isMouseDown = false;
+    startAutoSlide();
+});
 
 /* =================== Open Modal Function ================ */
 
