@@ -164,3 +164,16 @@ function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
 }
+
+/* ============= Projects Images Query ============== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const generatePaths = (folder, count) => 
+        Array.from({length: count}, (_, i) => `${folder}/${i+1}.png`);
+
+    document.querySelectorAll('[data-image-generate]').forEach(card => {
+        const folder = card.dataset.folder;
+        const count = parseInt(card.dataset.count);
+        card.dataset.images = JSON.stringify(generatePaths(folder, count));
+    });
+});
