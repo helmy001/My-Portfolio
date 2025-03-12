@@ -46,6 +46,7 @@ window.addEventListener('resize', () => {
 
 /* =================== Modal Details & Carousel ================ */
 // Global Modal Variables
+let autoSlideInterval;
 const modalOverlay = document.getElementById('modalOverlay');
 const closeModalBtn = document.getElementById('closeModal');
 
@@ -110,6 +111,12 @@ function openModal(card) {
     });
     updateCarousel();
 
+    // Start auto-slide (advance slide every 3 seconds)
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(() => {
+        nextSlideBtn.click();
+    }, 2000);
+
     // Populate Detail Sections using template
     detailSections.innerHTML = '';
     templateSections.forEach(section => {
@@ -163,6 +170,10 @@ document.addEventListener('keydown', (e) => {
 function closeModal() {
     modalOverlay.classList.remove('active');
     document.body.style.overflow = 'auto';
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+    }
 }
 
 /* ============= Projects Images Query ============== */
