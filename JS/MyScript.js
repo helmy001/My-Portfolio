@@ -168,12 +168,21 @@ function closeModal() {
 /* ============= Projects Images Query ============== */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const generatePaths = (folder, count) => 
-        Array.from({length: count}, (_, i) => `${folder}/${i+1}.png`);
+    const generatePaths = (folder, count, ext = 'png') => 
+        Array.from({length: count}, (_, i) => `${folder}/${i+1}.${ext}`);
 
     document.querySelectorAll('[data-image-generate]').forEach(card => {
         const folder = card.dataset.folder;
         const count = parseInt(card.dataset.count);
-        card.dataset.images = JSON.stringify(generatePaths(folder, count));
+        const ext = card.dataset.ext || 'png';
+        const extras = JSON.parse(card.dataset.extras || '[]');
+        
+        // Generate main numbered images
+        const mainImages = generatePaths(folder, count, ext);
+        
+        // Add explicit extra files
+        const allImages = [...mainImages, ...extras.map(e => `${folder}/${e}`)];
+        
+        card.dataset.images = JSON.stringify(allImages);
     });
 });
