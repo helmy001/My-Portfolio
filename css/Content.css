@@ -271,6 +271,27 @@ section {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    view-transition-name: project-card;
+    transition: transform var(--transition-medium) var(--ease-out-quint);
+    transform-style: preserve-3d;
+
+}
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(10, 132, 255, 0.15),
+      transparent 40%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 400ms;
+}
+  
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-card:hover {
@@ -288,6 +309,8 @@ section {
 }
 .project-card:hover .card-image {
     filter: brightness(0.6);
+    transform: scale(1.4);
+    transition: transform 0.3s ease;
 }
 .card-content {
     padding: 1.5rem;
@@ -523,6 +546,10 @@ input:focus, textarea:focus {
     background: #ffffff;
     border-radius: 20px;
 }
+.slide img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
 
 .carousel-control {
     position: absolute;
