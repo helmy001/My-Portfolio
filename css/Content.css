@@ -546,6 +546,9 @@ input:focus, textarea:focus {
     object-fit: contain;
     background: #ffffff;
     border-radius: 20px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    user-select: none; /* Modern browsers */
+    pointer-events: none; /* Disable interaction with image */
 }
 .slide img:hover {
     transform: scale(1.05);

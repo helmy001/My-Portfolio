@@ -183,7 +183,12 @@
     .image-description {
         padding: 0.4rem;
     }
+    .carousel-control:hover { background: rgba(0,0,0,0.5);}
 
+    .carousel-control:active { 
+        background: rgba(0,0,0,0.5);
+        background: var(--primary-color); 
+    }   
 }
 /* ===== Responsive Design MAX Width 480px===== */
 
