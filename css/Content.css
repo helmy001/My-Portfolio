@@ -23,8 +23,7 @@ section {
     justify-items: center;
     min-height: 90vh;
     padding: 4rem 2rem;
-    background: linear-gradient(rgba(23,28,40,0.9), rgba(23,28,40,0.9)), 
-        url("/Images/bk1.png"); /* Background with overlay */
+    background: linear-gradient(rgba(23,28,40,0.9), rgba(23,28,40,0.9)), url("../Images/Home-BK.png"); /* Background with overlay */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -266,7 +265,7 @@ section {
 .project-card {
     background: var(--card-bg);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 0.7rem;
     transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -309,7 +308,7 @@ section {
 }
 .project-card:hover .card-image {
     filter: brightness(0.6);
-    transform: scale(1.4);
+    transform: scale(1.26);
     transition: transform 0.3s ease;
 }
 .card-content {
@@ -328,14 +327,15 @@ section {
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.2rem;
 }
 .tech-tag {
-    background: rgba(10,132,255,0.1);
+    background: rgba(10, 132, 255, 0.1);
     color: var(--primary-color);
-    padding: 0.3rem 0.7rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    font-weight: 800;
 }
 .view-details-btn {
     background: var(--primary-color);
@@ -638,9 +638,10 @@ input:focus, textarea:focus {
     bottom: -100%;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
     color: #fff;
-    padding: 1.5rem;
+    padding: 1rem;
     transition: var(--transition);
     display: flex;
     align-items: center;
@@ -649,15 +650,15 @@ input:focus, textarea:focus {
 }
 
 .description-number {
-color: var(--primary-color);
-font-weight: bold;
-font-size: 1.2rem;
-min-width: 40px;
-text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 40px;
+    text-align: center;
 }
 
 .description-text {
-flex: 1;
-line-height: 1.4;
+    flex: 1;
+    line-height: 1.4;
 }
 

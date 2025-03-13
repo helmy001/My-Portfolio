@@ -180,13 +180,17 @@
     }
     .slide { height: 250px; }
 
+    .image-description {
+        padding: 0.4rem;
+    }
+
 }
 /* ===== Responsive Design MAX Width 480px===== */
 
 @media (max-width: 480px) {
     .sidebar {
         width: 70%;
-        max-width: 300px;
+        max-width: 120px;
         padding: 1.5rem 1rem;
     }
     
