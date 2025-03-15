@@ -85,8 +85,11 @@ function startAutoSlide() {
         
         // Determine current slide type and set delay
         const currentSlideUrl = slideUrls[currentSlideIndex];
+        if (!currentSlideUrl) return;
+        
         const isGif = currentSlideUrl.toLowerCase().endsWith('.gif');
-        const delay = isGif ? 8000 : 2000; // 5s for GIFs, 2s for images
+        const isWebp = currentSlideUrl.toLowerCase().endsWith('.webp');
+        const delay = (isGif||isWebp) ? 9000 : 2000; // 5s for GIFs, 2s for images
         
         autoSlideInterval = setTimeout(() => {
             nextSlideBtn.click();
@@ -166,10 +169,6 @@ function openModal(card) {
         carouselDots.appendChild(dot);
     });
     updateCarousel();
-
-    // Start auto-slide
-    startAutoSlide();
-
     // Populate Detail Sections using template
     detailSections.innerHTML = '';
     templateSections.forEach(section => {

@@ -307,7 +307,7 @@ section {
     border-radius: 20px;
 }
 .project-card:hover .card-image {
-    filter: brightness(0.6);
+    filter: brightness(0.7);
     transform: scale(1.26);
     transition: transform 0.3s ease;
 }
@@ -614,25 +614,63 @@ input:focus, textarea:focus {
 /* ======= Dynamic Detail Sections ======= */
 .detail-sections {
     margin-top: 2rem;
-    background: rgba(255,255,255,0.03);
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
     padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Individual Section */
 .detail-section {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    border-left: 4px solid var(--primary-color);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
 }
 
+.detail-section:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 6px solid var(--primary-color);
+}
+
+/* Title */
 .detail-title {
     font-size: 1.4rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(10,132,255,0.3);
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-transform: capitalize;
 }
 
+/* Content */
 .detail-content {
+    font-size: 1rem;
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* List inside detail-content */
+.detail-content ul {
+    padding-left: 1.2rem;
+}
+
+.detail-content ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.detail-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 /* ======= Image Description styles ======= */
