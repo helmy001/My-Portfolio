@@ -80,10 +80,17 @@ document.querySelectorAll('.project-card').forEach(card => {
 // Function to start auto slide
 function startAutoSlide() {
     if (!isMouseDown) {
-        if (autoSlideInterval) clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(() => {
+        // Clear any existing timeout
+        if (autoSlideInterval) clearTimeout(autoSlideInterval);
+        
+        // Determine current slide type and set delay
+        const currentSlideUrl = slideUrls[currentSlideIndex];
+        const isGif = currentSlideUrl.toLowerCase().endsWith('.gif');
+        const delay = isGif ? 8000 : 2000; // 5s for GIFs, 2s for images
+        
+        autoSlideInterval = setTimeout(() => {
             nextSlideBtn.click();
-        }, 2500);
+        }, delay);
     }
 }
 
@@ -185,23 +192,32 @@ function updateCarousel() {
     Array.from(carouselDots.children).forEach((dot, idx) => {
         dot.classList.toggle('active', idx === currentSlideIndex);
     });
+    // Restart auto-slide when slide changes
+    startAutoSlide();
 }
 
 function goToSlide(index) {
     currentSlideIndex = index;
     updateCarousel();
+    // Reset auto-slide timing for new slide
+    if (autoSlideInterval) clearTimeout(autoSlideInterval);
+    startAutoSlide();
 }
 
 prevSlideBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentSlideIndex = (currentSlideIndex - 1 + slideUrls.length) % slideUrls.length;
     updateCarousel();
+    if (autoSlideInterval) clearTimeout(autoSlideInterval);
+    startAutoSlide();
 });
 
 nextSlideBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     currentSlideIndex = (currentSlideIndex + 1) % slideUrls.length;
     updateCarousel();
+    if (autoSlideInterval) clearTimeout(autoSlideInterval);
+    startAutoSlide();
 });
 
 /* ============= Modal Close ============== */
@@ -239,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainImages = generatePaths(folder, count, ext);
         
         // Add explicit extra files
-        const allImages = [...mainImages, ...extras.map(e => `${folder}/${e}`)];
+        const allImages = [ ...extras.map(e => `${folder}/${e}`) , ...mainImages];
         
         card.dataset.images = JSON.stringify(allImages);
     });
@@ -266,3 +282,21 @@ document.querySelectorAll('.project-card').forEach(card => {
       card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
     });
 });
+
+
+
+
+// JavaScript to handle individual hover images
+document.querySelectorAll('.card-image').forEach(card => {
+    const hoverImage = card.dataset.hoverImage;
+    if(hoverImage) {
+      // Preload hover image
+      const img = new Image();
+      img.src = hoverImage;
+      
+      // Set CSS variable when loaded
+      img.onload = () => {
+        card.style.setProperty('--hover-image', `url('${hoverImage}')`);
+      };
+    }
+  });
