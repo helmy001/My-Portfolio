@@ -307,7 +307,7 @@ section {
     border-radius: 20px;
 }
 .project-card:hover .card-image {
-    filter: brightness(0.7);
+    filter: brightness(0.9);
     transform: scale(1.26);
     transition: transform 0.3s ease;
 }
@@ -582,7 +582,7 @@ input:focus, textarea:focus {
     transition: var(--transition);
 }
 .slide:hover img {
-    filter: brightness(0.9);
+    filter: brightness(1);
 }
     
 .carousel-control {
