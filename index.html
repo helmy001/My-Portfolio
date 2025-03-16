@@ -278,8 +278,8 @@
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-card" 
-                            data-title="Braille Display Device"
-                            data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
+                            data-title="STM32 Bare-Metal Development"
+                            data-info='{"Date":"15-12-2024","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
                             data-description="Low-cost Braille display and Notetaker device."
                             data-template='[
                             {"title":"Project Overview","content":"."},
@@ -295,7 +295,7 @@
                                              "desc 3",                    
                                              "desc 4",
                                              "desc 5"]'>
-                        <div class="card-image" style="background-image: url('Images/Projects/Braille Display/Background.png')" loading="lazy"></div>
+                        <div class="card-image" style="background-image: url('Images/Projects/Stm32/thumbnail.png')" loading="lazy"></div>
                         <div class="card-content">
                             <h3>Braille Display Project</h3>
                             <p>A Low-cost Braille display and Notetaker device.</p>
@@ -312,42 +312,78 @@
                         </div>
                     </div>
 
+                    <!-- Project 2 -->
                     <div class="project-card" 
-                            data-title="Braille Display Device"
-                            data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
-                            data-description="Low-cost Braille display and Notetaker device."
-                            data-template='[
-                            {"title":"Project Overview","content":"."},
-                            {"title":"Key Features","content":"."},
-                            {"title":"Technical Specifications","content":"."}]'
-                            data-image-generate
-                            data-folder="Images/Projects/Braille Display"
-                            data-count="5"
-                            data-ext="png"
-                            data-extras='["Display.gif"]'   
-                            data-imagedesc='["desc 1",
-                                             "desc 2",                    
-                                             "desc 3",                    
-                                             "desc 4",
-                                             "desc 5"]'>
-                        <div class="card-image" style="background-image: url('Images/Projects/Braille Display/Background.png')" loading="lazy"></div>
-                        <div class="card-content">
-                            <h3>Braille Display Project</h3>
-                            <p>A Low-cost Braille display and Notetaker device.</p>
-                            <div class="tech-stack">
-                                <span class="tech-tag">Raspberry Pi</span>
-                                <span class="tech-tag">Altium Designer</span>
-                                <span class="tech-tag">Fusion360</span>
-                                <span class="tech-tag">Laser Cutter</span>
-                                <span class="tech-tag">Pcb Milling</span>
-                                <span class="tech-tag">Flexinol Wire</span>
-                                <span class="tech-tag">Stepper Motors</span>
-                            </div>
-                            <button class="view-details-btn">View Details</button>
-                        </div>
+                    data-title="Braille Display Device"
+                    data-info='{
+                        "Date": "2023",
+                        "Category": "Graduation Project - Embedded Systems",
+                        "Tech": "Python, C++, Raspberry Pi, Stepper Motors, Flexinol Wire",
+                        "Team": [
+                        {"name": "Mazen Ibrahim", "profile": "https://www.linkedin.com/in/mazen-ibrahim-ab4285191"},
+                        {"name": "Omar Morshdy", "profile": "https://www.linkedin.com/in/omarmorshdy"},
+                        {"name": "Hadeer Ibraheem", "profile": "https://www.linkedin.com/in/hadeeribraheem"},
+                        {"name": "Asem Fathi", "profile": "https://www.linkedin.com/in/asem-fathi-5688b91a4"}
+                    ]}'
+                    data-description="A low-cost Refreshable Braille display and notetaker designed to provide an affordable, efficient solution for visually impaired individuals."
+                    data-template='[
+                        {"title":"Project Overview","content":"A Refreshable Braille display that uses an array of small Stepper Motors to represent Braille characters and 10 Buttons For (Navigation , Control and Writing), Enabling visually impaired users to read digital text through touch."},
+                        
+                        {"title":"Key Features","content":"• Real-time text-to-Braille conversion <br>• Tactile feedback using mechanically controlled pins <br>• Audio feedback integration for improved accessibility <br>• Compact design with low power consumption"},
+                        
+                        {"title":"Technical Specifications","content":"• Microcontroller-based control system (Raspberry Pi) <br>• Stepper motor-driven pin Mechanism <br>• Custom-designed Braille cell Motor Drivers PCBs For Pins number Reduction <br>• Python-based software interface for text input and file conversion"},
+                        
+                        {"title":"Challenges & Iterations","content":"Developing a precise and reliable actuation mechanism was a major challenge. We experimented with various actuation methods, including: <br>• **Piezoelectric actuators** – provided precision but were expensive <br>• **Solenoids** – simple but required high power and generated heat <br>• **Small Stepper motors ** – Good Choice But Hard To design reliable Mechanism with Feedback and Speed <br>• **Flexional Wire Mechanism** – investigated due to its potential for low power actuation but proved difficult to implement And train The Wire on a Specific shape"},
+                        
+                        {"title":"Project Achievements","content":"• User-friendly interface and controls for Easy navigation and customization. <br>• Compact & Efficient Pin Mechanism: Used Cd-Rom small Stepper Motors wire for cost-effective Braille cell Mechanism. <br>• Real-Time Text Conversion: text-to-Braille translation with Raspberry Pi and Python Scripts ,Also Take notes with braille and Save it as Txt file. <br>• Optimized Power Usage And Parallel Motor Stepping: Implemented sleep modes by efficient motor control Drivers. <br>• Scalable & Modular Design: Designed a PCB layout supporting multiple Braille cells with easy expansion."}
+                        ]'
+
+                    data-image-generate
+                    data-folder="Images/Projects/Braille Display"
+                    data-count="18"
+                    data-ext="png"
+                    data-extras='["Braille-animation.gif","Dots_Animation.webp","Display.gif"]' 
+                    data-imagedesc='["Reading Mode Animation Fusion360",
+                                     "Braille Dots Mechanism Design",
+                                     "Reading Mode Animation Blender",
+                                     "Braille Display Body 3D View",
+                                     "Braille Display Body 3D View",
+                                     "Bottom View",
+                                     "Bottom View",
+                                     "Bottom View",
+                                     "Components View",
+                                     "Top View",
+                                     "Side View For USB , Audio and Charger",
+                                     "CD-Rom Stepper Motor",
+                                     "CD-Rom Stepper Mechanism Design",
+                                     "PCB layout supporting multiple Motor Drivers",
+                                     "",
+                                     "PCB layout supporting multiple Motor Drivers",
+                                     "Motor Driver 2 Layer Pcb Design",
+                                     "Writing Buttons View",
+                                     "Flexinol Wire Design",
+                                     "Stepper Motor FeedBack Design",
+                                     "Small Stepper Motors 3d View"]'>
+                <div class="card-image" style="background-image: url('Images/Projects/Braille Display/Background.png')" loading="lazy"></div>
+                <div class="card-content">
+                    <h3>Braille Display Project</h3>
+                    <p>A low-cost Refreshable Braille display and notetaker device designed to assist visually impaired.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Raspberry Pi</span>
+                        <span class="tech-tag">Altium Designer</span>
+                        <span class="tech-tag">Fusion360</span>
+                        <span class="tech-tag">Laser Cutter</span>
+                        <span class="tech-tag">Pcb Milling</span>
+                        <span class="tech-tag">Flexinol Wire</span>
+                        <span class="tech-tag">Stepper Motors</span>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
+                </div>
                     </div>
 
-                </div>
+
+
+            </div>
             </section>
 
             <!--============= My Contact Section ================= -->
@@ -422,7 +458,7 @@
                         <!-- Right Column: Project Meta -->
                         <div class="ModalRight-column">
                             <div class="project-info">
-                                <h3>Project Information</h3>
+                                <h2>Project Information</h2>
                                 <div id="projectInfo"></div>
                             </div>
                         </div>

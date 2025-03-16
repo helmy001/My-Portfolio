@@ -522,6 +522,28 @@ input:focus, textarea:focus {
     padding: 1.5rem;
 }
 
+/* Title Styling */
+.project-info h2 {
+    font-size: 1.2rem;
+    color: #81bfe2;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(10, 132, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+/* Paragraph Styling */
+.project-info p {
+    margin: 0.6rem 0;
+    line-height: 1.5;
+}
+
+/* Bold Labels */
+.project-info strong {
+    color: #1e81bb;
+    font-weight: bold;
+}
+
 /* ======== Carousel Styles ======== */
 
 .carousel-container {

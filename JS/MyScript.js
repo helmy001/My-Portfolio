@@ -86,7 +86,7 @@ function startAutoSlide() {
         // Determine current slide type and set delay
         const currentSlideUrl = slideUrls[currentSlideIndex];
         if (!currentSlideUrl) return;
-        
+
         const isGif = currentSlideUrl.toLowerCase().endsWith('.gif');
         const isWebp = currentSlideUrl.toLowerCase().endsWith('.webp');
         const delay = (isGif||isWebp) ? 9000 : 2000; // 5s for GIFs, 2s for images
@@ -142,9 +142,18 @@ function openModal(card) {
 
     // Populate Project Info
     projectInfoContainer.innerHTML = `
-        <p><strong>Date:</strong> ${info.Date || 'N/A'}</p>
+        <p><strong>Date:</strong>  &nbsp  ${info.Date || 'N/A'}</p>
         <p><strong>Category:</strong> ${info.Category || 'N/A'}</p>
-        <p><strong>Technology:</strong> ${info.Tech || 'N/A'}</p>
+        <p><strong>Technology:</strong> &nbsp  ${info.Tech || 'N/A'}</p>
+        <ul>
+            ${info.Team 
+                ?  `<p><strong>Team Members:</strong></p>
+                    ${info.Team.map(member => 
+                    `<li><a href="${member.profile}" target="_blank" style="color:rgb(155, 88, 76); text-decoration: none;">${member.name}</a></li>`
+                ).join("")}
+                
+        </ul>`
+            : ""}
     `;
 
     // Populate Carousel

@@ -162,6 +162,29 @@
         height: 8px;
     }
 
+    .detail-sections {
+        padding: 1.5rem;
+    }
+
+    .detail-section {
+        padding: 1rem;
+    }
+
+    .detail-title {
+        font-size: 1.3rem;
+    }
+
+    .detail-content {
+        font-size: 0.95rem;
+    }
+
+    .project-info h2 {
+        font-size: 1rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+    }
 }
 
 /* ===== Responsive Design MAX Width 600px===== */
