@@ -149,12 +149,16 @@
     }
     /* Adjust slider image object-fit if needed */
     .slide img {
-        object-fit: cover;
+        object-fit: contain;
     }
     /* Reduce carousel controls size */
     .carousel-control {
         padding: 0.6rem;
         font-size: 1.3rem;
+    }
+
+    .carousel-dots {
+        gap: 0.25rem;
     }
     /* Stack dots if needed, or reduce their size */
     .carousel-dot {
