@@ -348,7 +348,7 @@
                     <!-- Project 2 Stm32-->
                     <div class="project-card" 
                             data-title="STM32 Bare-Metal Development"
-                            data-info='{"Date":"15-12-2024","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
+                            data-info='{"Date":"15-12-2024","Category":"Embedded Systems","Tech":"C, Stm32,"}'
                             data-description="Low-cost Braille display and Notetaker device."
                             data-template='[
                             {"title":"Project Overview","content":"."},
@@ -358,24 +358,20 @@
                             data-folder="Images/Projects/Stm32"
                             data-count="0"
                             data-ext="png"
-                            data-extras='["Display.gif"]'   
-                            data-imagedesc='["desc 1",
-                                             "desc 2",                    
-                                             "desc 3",                    
-                                             "desc 4",
-                                             "desc 5"]'>
+                            data-extras='[""]'   
+                            data-imagedesc='["desc "]'>
                         <div class="card-image" style="background-image: url('Images/Projects/Stm32/BackGround.png')" loading="lazy"></div>
                         <div class="card-content">
                             <h3>STM32 Bare-Metal Development</h3>
-                            <p>A Low-cost Braille display and Notetaker device.</p>
+                            <p>A Bare-metal STM32 system with custom drivers, scheduler, and Makefile build.</p>
                             <div class="tech-stack">
-                                <span class="tech-tag">Raspberry Pi</span>
-                                <span class="tech-tag">Altium Designer</span>
-                                <span class="tech-tag">Fusion360</span>
-                                <span class="tech-tag">Laser Cutter</span>
-                                <span class="tech-tag">Pcb Milling</span>
-                                <span class="tech-tag">Flexinol Wire</span>
-                                <span class="tech-tag">Stepper Motors</span>
+                                <span class="tech-tag">STM32 (Blue Pill)</span>
+                                <span class="tech-tag">C</span>
+                                <span class="tech-tag">MakeFile</span>
+                                <span class="tech-tag">Linker Script</span>
+                                <span class="tech-tag">StartUp Code</span>
+                                <span class="tech-tag">Core Drivers</span>
+                                <span class="tech-tag">Scheduler</span>
                             </div>
                             <button class="view-details-btn">View Details</button>
                         </div>
@@ -383,33 +379,43 @@
                     <!-- Project 3 SumoBot-->
                     <div class="project-card" 
                         data-title="SumoBot Autonomous Car"
-                        data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
-                        data-description="Low-cost Braille display and Notetaker device."
+                        data-info='{"Date":"2021","Category":"Embedded Systems","Tech":"C++, Ultrasonic Sensors, Fusion360, Motor Drivers, Algorithms"}'
+                        data-description=""
                         data-template='[
-                        {"title":"Project Overview","content":"."},
-                        {"title":"Key Features","content":"."},
-                        {"title":"Technical Specifications","content":"."}]'
+                        {"title":"Project Overview","content":"Autonomous SumoBot designed for Competition, using a Microcontroller to process sensor inputs and control motor movements."},
+                        {"title":"Key Features","content":"• Ultrasonic sensors for opponent detection <br>• IR sensors for edge detection <br>• Microcontroller-based decision-making<br>• High-torque motors for movement and pushing opponents<br>• Compact and durable chassis design"},
+                        {"title":"Technical Specifications","content":"• Microcontroller: ATmega328P <br>• Sensors: Ultrasonic HC-SR04, IR Sensors<br>• Motor Drivers: 12V 4Channel Relay Module <br>• Power: 12V Battery<br>• Control Algorithm: State-based behavior with sensor"}]'
                         data-image-generate
                         data-folder="Images/Projects/SumoBot"
                         data-count="14"
                         data-ext="png"
-                       data-imagedesc='["desc 1",
-                                            "desc 2",                    
-                                            "desc 3",                    
-                                            "desc 4",
-                                            "desc 5"]'>
+                       data-imagedesc='["Angled front view of the SumoBot.",
+                                        "Side view of the SumoBot chassis.",
+                                        "Partially open view showing internal components.",
+                                        "3D-rendered model of the SumoBot.",
+                                        "Internal Electronics and Wiring.",
+                                        "Rear view of the assembled SumoBot.",
+                                        "Close-up of motor and electronic connections.",
+                                        "Side perspective highlighting the wheel system.",
+                                        "Another side angle of the SumoBot chassis.",
+                                        "3D model showcasing front sensors.",
+                                        "Front view of the 3D-rendered SumoBot.",
+                                        "Bottom view of the SumoBot 3D model.",
+                                        "Rear view of the 3D Model",
+                                        "Side view of the chassis 3D Model."
+                                        ]'>
+
                     <div class="card-image" style="background-image: url('Images/Projects/SumoBot/Background.png')" loading="lazy"></div>
                     <div class="card-content">
                         <h3>SumoBot Autonomous Car</h3>
-                        <p>A Low-cost Braille display and Notetaker device.</p>
+                        <p>SumoBot Car with Sensors for Navigation, Obstacle detection, and Strategic movement.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Altium Designer</span>
+                            <span class="tech-tag">C++</span>
                             <span class="tech-tag">Fusion360</span>
-                            <span class="tech-tag">Laser Cutter</span>
-                            <span class="tech-tag">Pcb Milling</span>
-                            <span class="tech-tag">Flexinol Wire</span>
-                            <span class="tech-tag">Stepper Motors</span>
+                            <span class="tech-tag">Motor Drivers</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">IR Sensors</span>
+                            <span class="tech-tag">Ultrasonic Sensors</span>
                         </div>
                         <button class="view-details-btn">View Details</button>
                     </div>
@@ -417,12 +423,11 @@
                     <!-- Project 4 Line Follower -->
                     <div class="project-card" 
                         data-title="Line Follower Car"
-                        data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
-                        data-description="Low-cost Braille display and Notetaker device."
+                        data-info='{"Date":"2021","Category":"Embedded Systems","Tech":"C , Proteus , PCB , Motor Drivers , IR Sensors"}'
+                        data-description="Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."
                         data-template='[
-                        {"title":"Project Overview","content":"."},
-                        {"title":"Key Features","content":"."},
-                        {"title":"Technical Specifications","content":"."}]'
+                        {"title":"Project Overview","content":"Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."},
+                        {"title":"Key Features","content":"• **Microcontroller:** ATmega328P .<br> • **IR Sensor Array:** Uses Custom Designed IR-PCBs that Detects the path and adjusts the car’s direction accordingly.<br>• **Control Algorithm:** Ensures smooth and accurate movement.<br>• **Motor Control:** Uses Custom Designed H-bridge motor drivers PCB for direction control.<br>• **Battery-Powered:** Operates with rechargeable batteries."}]'
                         data-image-generate
                         data-folder="Images/Projects/LineFollower"
                         data-count="5"
@@ -436,15 +441,13 @@
                     <div class="card-image" style="background-image: url('Images/Projects/LineFollower/BackGround.png')" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Line Follower Car</h3>
-                        <p>A Low-cost Braille display and Notetaker device.</p>
+                        <p>Self-navigating Car that follows a black line on a white surface using IR sensors array.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Altium Designer</span>
-                            <span class="tech-tag">Fusion360</span>
-                            <span class="tech-tag">Laser Cutter</span>
-                            <span class="tech-tag">Pcb Milling</span>
-                            <span class="tech-tag">Flexinol Wire</span>
-                            <span class="tech-tag">Stepper Motors</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">proteus</span>
+                            <span class="tech-tag">PCB</span>
+                            <span class="tech-tag">Motor Drivers</span>
+                            <span class="tech-tag">IR Sensors</span>
                         </div>
                         <button class="view-details-btn">View Details</button>
                     </div>
