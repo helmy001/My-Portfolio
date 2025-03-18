@@ -283,7 +283,7 @@
                     data-info='{
                         "Date": "2023",
                         "Category": "Graduation Project - Embedded Systems",
-                        "Tech": "Python, C++, Raspberry Pi, Stepper Motors, Flexinol Wire",
+                        "Tech": "Python, C++, Raspberry Pi, Stepper Motors, Flexinol Wire, 3D Printing",
                         "Team": [
                         {"name": "Mazen Ibrahim", "profile": "https://www.linkedin.com/in/mazen-ibrahim-ab4285191"},
                         {"name": "Omar Morshdy", "profile": "https://www.linkedin.com/in/omarmorshdy"},
@@ -341,6 +341,7 @@
                         <span class="tech-tag">Pcb Milling</span>
                         <span class="tech-tag">Flexinol Wire</span>
                         <span class="tech-tag">Stepper Motors</span>
+                        <span class="tech-tag">3D Printing</span>
                     </div>
                     <button class="view-details-btn">View Details</button>
                 </div>
@@ -420,37 +421,44 @@
                         <button class="view-details-btn">View Details</button>
                     </div>
                     </div>
-                    <!-- Project 4 Line Follower -->
+                    <!-- Project 4 Image Quantization-->
                     <div class="project-card" 
-                        data-title="Line Follower Car"
-                        data-info='{"Date":"2021","Category":"Embedded Systems","Tech":"C , Proteus , PCB , Motor Drivers , IR Sensors"}'
-                        data-description="Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."
-                        data-template='[
-                        {"title":"Project Overview","content":"Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."},
-                        {"title":"Key Features","content":"• **MicroController:** ATmega328P .<br> • **IR Sensor Array:** Uses Custom Designed IR-PCBs that Detects the path and adjusts the car’s direction accordingly.<br>• **Control Algorithm:** Ensures smooth and accurate movement.<br>• **Motor Control:** Uses Custom Designed H-bridge motor drivers PCB for direction control.<br>• **Battery-Powered:** Operates with rechargeable batteries."}]'
-                        data-image-generate
-                        data-folder="Images/Projects/LineFollower"
-                        data-count="5"
-                        data-ext="png"
-                        data-extras='["lineFollower.webp"]'   
-                        data-imagedesc='["IR sensor Array Simulation", 
-                                         "Fully Assembled Line Follower Car", 
-                                         "IR Custom PCB",                     
-                                         "2 Motors H-Bridge Breadboard Prototype",                     
-                                         "Motor H-Bridge Breadboard Prototype", 
-                                         "Custom H-Bridge PCB"]'>
-                    <div class="card-image" style="background-image: url('Images/Projects/LineFollower/BackGround.png')" loading="lazy"></div>
+                         data-title="Image Quantization Tool"
+                         data-info='{"Date":"2022","Category":"Image Processing","Tech":"C#, Graph Theory, Prims Algorithm"}'
+                         data-description="An image quantization tool that reduces the number of colors in an image while preserving visual quality using clustering and graph-based techniques."
+                         data-template='[
+                         {"title":"Project Overview","content":"This project focuses on reducing the color palette of an image using image quantization techniques. It leverages graph theory and clustering to create a visually optimized version of the original image."},
+                         {"title":"Key Features","content":"⦿ Efficient color reduction using single-linkage clustering. <br>⦿ Uses Minimum Spanning Tree (MST) to group similar colors. <br>⦿ Supports customizable color palette sizes. <br>⦿ Fast processing using priority queues and heaps."},
+                         {"title":"Technical Specifications","content":"⦿ Developed in C#. <br>⦿ Implements Prims Algorithm for MST construction. <br>⦿ Uses Euclidean distance for color similarity measurement. <br>⦿ Optimized with priority queues for fast execution."},
+                         {"title":"Algorithms Used","content":"⦿ Prims Algorithm: Used for building a Minimum Spanning Tree (MST) to optimize color clustering. <br>⦿ Single-Linkage Clustering: Groups colors based on similarity. <br>⦿ K-Means Clustering: Optional method for refining color clusters."},
+                         {"title":"Performance Optimization","content":"⦿ Utilizes priority queues for efficient MST construction. <br>⦿ Reduces color comparisons using spatial data structures. <br>⦿ Optimized Euclidean distance calculations for faster processing."}
+                         ]'
+                         data-image-generate
+                         data-folder="Images/Projects/ImageQuantization"
+                         data-count="8"
+                         data-ext="png"
+                         data-extras='[]'   
+                         data-imagedesc='[
+                                            "Image segmentation into clusters.",
+                                            "Graph-based image representation.",
+                                            "Color histogram analysis.",
+                                            "Color quantization via clustering.",
+                                            "Object detection with segmentation.",
+                                            "Binary thresholding for separation.",
+                                            "Binary thresholding for separation.",
+                                            "Tool Input and Output."]'>
+                    <div class="card-image" style="background-image: url('Images/Projects/ImageQuantization/BackGround.png')" loading="lazy"></div>
                     <div class="card-content">
-                        <h3>Line Follower Car</h3>
-                        <p>Self-navigating Car that follows a black line on a white surface using IR sensors array.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">C</span>
-                            <span class="tech-tag">proteus</span>
-                            <span class="tech-tag">PCB</span>
-                            <span class="tech-tag">Motor Drivers</span>
-                            <span class="tech-tag">IR Sensors</span>
-                        </div>
-                        <button class="view-details-btn">View Details</button>
+                    <h3>Image Quantization Tool</h3>
+                    <p>An image quantization tool that reduces colors while preserving visual quality.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Graph Theory</span>
+                        <span class="tech-tag">Prim's Algorithm</span>
+                        <span class="tech-tag">MST</span>
+                        <span class="tech-tag">Clustering</span>
+                    </div>
+                    <button class="view-details-btn">View Details</button>
                     </div>
                     </div>
                     <!-- Project 5 Logic Design  -->
@@ -488,7 +496,7 @@
                     <div class="project-card" 
                         data-title="IOT Data Monitoring"
                         data-info='{"Date":"Q3 2023","Category":"Embedded Systems","Tech":"C++, python,RPI"}'
-                        data-description="Low-cost Braille display and Notetaker device."
+                        data-description="Remote IoT data monitoring and control system Using ESP-01"
                         data-template='[
                         {"title":"Project Overview","content":"."},
                         {"title":"Key Features","content":"."},
@@ -498,27 +506,58 @@
                         data-count="0"
                         data-ext="png"
                         data-extras='[""]'   
-                        data-imagedesc='["desc 1",
-                                            "desc 2",                    
-                                            "desc 3",                    
-                                            "desc 4",
-                                            "desc 5"]'>
+                        data-imagedesc='[""]'>
                     <div class="card-image" style="background-image: url('Images/Projects/IOT/BackGround.png')" loading="lazy"></div>
                     <div class="card-content">
                         <h3>IOT Data Monitoring</h3>
-                        <p>A Low-cost Braille display and Notetaker device.</p>
+                        <p>Remote IoT data monitoring and control system Using ESP-01.</p>
                         <div class="tech-stack">
-                            <span class="tech-tag">Raspberry Pi</span>
-                            <span class="tech-tag">Altium Designer</span>
-                            <span class="tech-tag">Fusion360</span>
-                            <span class="tech-tag">Laser Cutter</span>
-                            <span class="tech-tag">Pcb Milling</span>
-                            <span class="tech-tag">Flexinol Wire</span>
-                            <span class="tech-tag">Stepper Motors</span>
+                            <span class="tech-tag">Embedded C</span>
+                            <span class="tech-tag">Atmega328P</span>
+                            <span class="tech-tag">ESP-01 (Wi-Fi) </span>
+                            <span class="tech-tag">UART</span>
+                            <span class="tech-tag">LCD</span>
+                            <span class="tech-tag">ADC & Sensors</span>
+                            <span class="tech-tag">IoT Monitoring</span>
                         </div>
                         <button class="view-details-btn">View Details</button>
                     </div>
                     </div>
+                    <!-- Project 7 Line Follower -->
+                    <div class="project-card" 
+                        data-title="Line Follower Car"
+                        data-info='{"Date":"2021","Category":"Embedded Systems","Tech":"C , Proteus , PCB , Motor Drivers , IR Sensors"}'
+                        data-description="Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."
+                        data-template='[
+                        {"title":"Project Overview","content":"Line Follower Car is a self-navigating Car that follows a black line on a white surface using IR sensors array."},
+                        {"title":"Key Features","content":"• **MicroController:** ATmega328P .<br> • **IR Sensor Array:** Uses Custom Designed IR-PCBs that Detects the path and adjusts the car’s direction accordingly.<br>• **Control Algorithm:** Ensures smooth and accurate movement.<br>• **Motor Control:** Uses Custom Designed H-bridge motor drivers PCB for direction control.<br>• **Battery-Powered:** Operates with rechargeable batteries."}]'
+                        data-image-generate
+                        data-folder="Images/Projects/LineFollower"
+                        data-count="5"
+                        data-ext="png"
+                        data-extras='["lineFollower.webp"]'   
+                        data-imagedesc='["IR sensor Array Simulation", 
+                                         "Fully Assembled Line Follower Car", 
+                                         "IR Custom PCB",                     
+                                         "2 Motors H-Bridge Breadboard Prototype",                     
+                                         "Motor H-Bridge Breadboard Prototype", 
+                                         "Custom H-Bridge PCB"]'>
+                    <div class="card-image" style="background-image: url('Images/Projects/LineFollower/BackGround.png')" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Line Follower Car</h3>
+                        <p>Self-navigating Car that follows a black line on a white surface using IR sensors array.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">proteus</span>
+                            <span class="tech-tag">PCB</span>
+                            <span class="tech-tag">Motor Drivers</span>
+                            <span class="tech-tag">IR Sensors</span>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+                    </div>
+
+
 
             </div>
             </section>
