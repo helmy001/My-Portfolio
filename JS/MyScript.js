@@ -292,8 +292,6 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-
-
 // JavaScript to handle individual hover images
 document.querySelectorAll('.card-image').forEach(card => {
     const hoverImage = card.dataset.hoverImage;
@@ -308,3 +306,11 @@ document.querySelectorAll('.card-image').forEach(card => {
       };
     }
   });
+
+
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("main-container").style.display = "block";
+    }, 3000); // 3 seconds delay
+});
