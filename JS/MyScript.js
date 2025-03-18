@@ -307,6 +307,7 @@ document.querySelectorAll('.card-image').forEach(card => {
     }
   });
 
+/* ============= Loader Function============== */
 
 window.addEventListener("load", function () {
     setTimeout(function () {
