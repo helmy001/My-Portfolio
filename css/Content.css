@@ -17,7 +17,7 @@ section {
  /* ===== Home Section Style===== */
  .Home-content {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1.7fr 1fr;
     gap: 3rem;
     align-items: center;
     justify-items: center;
@@ -400,25 +400,54 @@ section {
     padding: 1.5rem;
     background: var(--card-bg);
     border-radius: 15px;
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .contact-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     border-color: var(--primary-color);
 }
 
 .contact-item i {
     font-size: 1.8rem;
-    min-width: 40px;
-    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover i {
+    background: var(--primary-color);
+    color: white;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.9;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .form-group {
@@ -427,25 +456,45 @@ section {
     gap: 0.8rem;
 }
 
+.form-group label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 input, textarea {
     padding: 1.2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    color: white;
+    font-size: 1rem;
     transition: var(--transition);
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 input:focus, textarea:focus {
     border-color: var(--primary-color);
     outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 128, 237, 0.1);
 }
 
 .submit-btn {
     width: 100%;
     padding: 1.2rem;
     font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
 }
 
 .submit-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(47, 128, 237, 0.2);
 }
 
  /* ========= ========= ========= ====== Modal Overlay ===== ========= ========= ========= */
