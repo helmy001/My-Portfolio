@@ -10,13 +10,30 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center
+    align-items: stretch;
 }
 
 .sidebar.active {
     transform: translateX(0);
     box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+.sidebar p {
+    font-family: "Sigmar", sans-serif;
+    font-size: 1.4rem;
+    color: #81c6f5;
+    margin: 0 0 1rem;
+    align-self: flex-start;
+}
+
+
+/* Center the nav within its container */
+.sidebar nav {
+    flex: 1;  /* Take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar nav ul {

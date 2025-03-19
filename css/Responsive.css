@@ -58,11 +58,18 @@
 /* ===== Responsive Design MAX Width 768px===== */
 
 @media (max-width: 768px) {
+
+    .sidebar p {
+        font-size: 0.8rem;
+    }
     .masked-text {
         font-size: 3rem;
     }
 
-    .Intro-container {
+    .Intro-container p{
+        font-size: 0.9rem;
+    }
+    .Intro-container p strong {
         font-size: 1rem;
     }
 
