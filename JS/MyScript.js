@@ -29,10 +29,38 @@ document.addEventListener('click', (e) => {
 });
 
 /* ================= Form Submission =============== */
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Message sent successfully!');
-    e.target.reset();
+
+document.querySelector('.contact-form').addEventListener('submit', async (event) => {
+    
+    event.preventDefault();
+    emailjs.init("U4BU35IZ11_O0Qo82"); 
+    const btn = event.target.querySelector('.submit-btn');
+    
+    try {
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        await emailjs.send(
+            'service_5bbq7va',
+            'template_doypdlf',
+            {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            }
+        );
+
+        btn.textContent = 'Sent!';
+        setTimeout(() => {
+            btn.textContent = 'Send Message';
+            btn.disabled = false;
+            event.target.reset();
+        }, 2000);
+    } catch (error) {
+        console.error('Email Error:', error);
+        btn.textContent = 'Error - Retry';
+        btn.disabled = false;
+    }
 });
 
 /* ================== Window Resize Handler =================== */
@@ -312,6 +340,6 @@ document.querySelectorAll('.card-image').forEach(card => {
 window.addEventListener("load", function () {
     setTimeout(function () {
         document.getElementById("loader").style.display = "none";
-        document.getElementById("main-container").style.display = "block";
+        document.getElementById("MainContainer").style.display = "block";
     }, 3000); // 3 seconds delay
 });
