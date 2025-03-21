@@ -901,3 +901,23 @@ input:focus, textarea:focus {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.5; }
 }
+
+/* ======= Footer styles ======= */
+
+.site-footer {
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .site-footer p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
