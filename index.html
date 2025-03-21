@@ -49,9 +49,10 @@
                 <ul>
                     <li><a href="#Home"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                    <li><a href="#Education"><i class="fas fa-graduation-cap"></i>Education</a></li>
                     <li><a href="#projects"><i class="fa fa-list"></i>Projects</a></li>
                     <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-                </ul>
+                </ul>   
             </nav>
         </div>
 
@@ -87,7 +88,7 @@
             <section id="about" class="section fade-in">
                 <div class="about-container">
                     <div class="about-header">
-                        <h2>Technical Expertise</h2>
+                        <h2 class="Section-title">Technical Expertise</h2>
                         <p>Combining hardware knowledge with software proficiency</p>
                     </div>
 
@@ -268,33 +269,75 @@
 
             <!--======= Education / Experience Section ======= -->
             <section id="Education" class="section fade-in">
-                <h2>Education</h2>
-                <div class="education-container">
-                    <div class="education-card">
-                        <div class="education-date">2019 - 2023</div>
-                        <h3 class="education-degree">Bachelor of Computer Science</h3>
-                        <div class="education-details">
-                            <p>Ain Shams University</p>
-                            <p>Specialized in Embedded Systems</p>
-                            <p>Graduated with GPA : 3.01</p>
+                <div class="EducationSection-container">
+                    <h2 class="Section-title">Education & Experience</h2>
+                    
+                    <!-- 3-column layout for Education, Internship, Advanced Training -->
+                    <div class="Education-Layout">
+                      
+                      <!-- Education Column -->
+                      <div class="column-card">
+                        <h3 class="column-category"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="timeline-card">
+                          <div class="timeline-header">
+                            <span class="timeline-date">2019 - 2023</span>
+                            <h4 class="timeline-title">Bachelor of Computer Science</h4>
+                            <p class="timeline-subtitle"> <strong>Ain Shams University</strong></p>
+                          </div>
+                          <div class="timeline-content">
+                            <ul class="timeline-list">
+                              <li> Specialization: Computer Systems </li>
+                              <li> Graduated with GPA : 3.01</li>
+                              <li> Graduation Project : Braille Display Device</li>
+                            </ul>
+                          </div>
                         </div>
-                    </div>
-                    <div class="education-card">
-                        <div class="education-date">2023 - Present</div>
-                        <h3 class="education-degree">Professional Certifications</h3>
-                        <div class="education-details">
-                            <p>• Advanced Embedded Systems Certification</p>
-                            <p>• ARM Cortex-M Programming Certification</p>
-                            <p>• PCB Design Professional Certification</p>
+                      </div>
+                      
+                      <!-- Internship Column -->
+                      <div class="column-card">
+                        <h3 class="column-category"><i class="fas fa-briefcase"></i> Internship</h3>
+                        <div class="timeline-card">
+                          <div class="timeline-header">
+                            <span class="timeline-date">Jul 2022 - Dec 2022</span>
+                            <h4 class="timeline-title">Embedded Systems Intern</h4>
+                            <p class="timeline-subtitle">Orange Digital Center Egypt – PCB Program</p>
+                          </div>
+                          <div class="timeline-content">
+                            <ul class="timeline-list">
+                              <li> Tiva C Development Board </li>
+                              <li> Firmware Development </li>
+                            </ul>
+                          </div>
                         </div>
-                    </div>
+                      </div>
+                      
+                      <!-- Advanced Training Column -->
+                      <div class="column-card">
+                        <h3 class="column-category"><i class="fas fa-cogs"></i> Advanced Training</h3>
+                        <div class="timeline-card">
+                          <div class="timeline-header">
+                            <h4 class="timeline-title">Embedded Systems Training</h4>
+                          </div>
+                          <div class="timeline-content">
+                            <ul class="timeline-list">
+                              <li>Embedded Systems Course –  Eng.Mohamed Tarek (March 1, 2021)</li>
+                              <li>EgFwd Embedded Systems Advanced Nanodegree Program (September 25, 2022)</li>
+                              <li>Advanced Embedded Systems Diploma – Ahmed Abd El-Ghafar (March 2024) </li>
+                              <li>ARM Based Microcontroller Programming – IMT (December 2024)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div> 
                 </div>
             </section>
 
             <!--============= Projects Section ================= -->
 
             <section id="projects" class="section fade-in">
-                <h2>Featured Projects</h2>
+                <h2 class="Section-title"> Featured Projects</h2>
                 <div class="projects-grid">
 
                     <!-- Project 1 Braille Display -->
@@ -591,12 +634,12 @@
                     </div>
                     </div>
 
-            </div>
+                </div>
             </section>
 
             <!--============= My Contact Section ================= -->
             <section id="contact" class="section fade-in">
-                <h2>Get In Touch</h2>
+                <h2 class="Section-title" >Get In Touch</h2>
                 <div class="contact-container">
                     <div class="contact-info">
                         <div class="contact-item">

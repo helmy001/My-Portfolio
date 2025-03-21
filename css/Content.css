@@ -239,35 +239,90 @@ section {
 
  /* ========= ========= ========= ====== Education-Section ===== ========= ========= ========= */
 
- /* ===== Education Section ===== */
- .education-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+ .Section-title {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    padding-bottom: 1rem;
 }
 
-.education-card {
+.Section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.Education-Layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+.column-card {
     background: var(--card-bg);
     border-radius: 15px;
-    padding: 2rem;
-    position: relative;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-.education-date {
+.column-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.column-category {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+.timeline-subtitle {
+    color: #dbb1c8;
+    font-weight: 700;
 }
 
-.education-degree {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.timeline-card {
+    background: var(--bg-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.education-details {
-    opacity: 0.9;
-    line-height: 1.6;
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.timeline-card:hover::before {
+    opacity: 0.05;
 }
 
  /* ========= ========= ========= ====== Projects-Section ===== ========= ========= ========= */

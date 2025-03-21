@@ -53,6 +53,21 @@
     }
 
     .slide { height: 400px; }
+
+
+    .Education-Layout {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .column-card {
+        margin-bottom: 2rem;
+    }
+    
+    .Section-title {
+        font-size: 2.2rem;
+    }
 }
 
 /* ===== Responsive Design MAX Width 768px===== */
@@ -198,6 +213,20 @@
     .project-info p {
         font-size: 0.95rem;
     }
+
+
+    .Section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .column-category {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-card {
+        padding: 1.2rem;
+    }
 }
 
 /* ===== Responsive Design MAX Width 600px===== */
@@ -227,6 +256,33 @@
     } 
     .button-container {
         flex-direction: column;
+    }
+
+    .Section-title {
+        font-size: 1.8rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .Section-title::after {
+        width: 80px;
+        height: 2px;
+    }
+    
+    .column-category {
+        font-size: 1.1rem;
+        gap: 0.6rem;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .timeline-list li {
+        font-size: 0.9rem;
     }
 }
 /* ===== Responsive Design MAX Width 480px===== */
@@ -317,6 +373,22 @@
     .prev-slide { left: 0.1rem; }
     .next-slide { right: 0.1rem; }
 
+    .Education-Layout {
+        gap: 1rem;
+    }
+    
+    .column-card {
+        padding: 1rem;
+    }
+    
+    .timeline-card {
+        padding: 1rem;
+    }
+    
+    .timeline-list li {
+        font-size: 0.85rem;
+        margin-bottom: 0.6rem;
+    }
 }
 
 /* ===== Responsive Design MAX Width 360px===== */
